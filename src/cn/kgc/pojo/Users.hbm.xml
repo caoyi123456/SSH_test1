@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!--name：实体类名,table：对应数据库表名-->
+    <class name="cn.kgc.pojo.Users" table="USERS" dynamic-update="true">
+        <!-- 配置主键映射 -->
+        <!--name：实体类的属性名,column：数据库表的字段名,type：数据类型-->
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <!-- 设置主键自动生成方式 -->
+            <generator class="assigned"/>
+        </id>
+
+        <!-- 配置其他属性 -->
+        <!--name：实体类的属性名,column：数据库表的字段名,type：数据类型-->
+        <property name="name" type="java.lang.String">
+            <column name="NAME"/>
+        </property>
+
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD"/>
+        </property>
+
+        <property name="phone" type="java.lang.String">
+            <column name="TELEPHONE"/>
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME"/>
+        </property>
+        <property name="isAdmin" type="java.lang.String">
+            <column name="ISADMIN"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
